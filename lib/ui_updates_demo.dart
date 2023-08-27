@@ -4,6 +4,7 @@ class UIUpdatesDemo extends StatefulWidget {
   const UIUpdatesDemo({super.key});
 
   @override
+  // override createElement to see when it is called. By default it is called in the constructor by flutter
   StatefulElement createElement() {
     print('UIUpdatesDemo CREATEELEMENT called');
     return super.createElement();
@@ -18,6 +19,9 @@ class UIUpdatesDemo extends StatefulWidget {
 class _UIUpdatesDemo extends State<UIUpdatesDemo> {
   var _isUnderstood = false;
 
+  //every widget has it own element
+  //update => build only when is needed to improve performance
+  // now every element has draw. When setState is called the build method is called
   @override
   Widget build(BuildContext context) {
     print('UIUpdatesDemo BUILD called');
