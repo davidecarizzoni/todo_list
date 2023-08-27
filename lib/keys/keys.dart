@@ -52,6 +52,10 @@ class _KeysState extends State<Keys> {
 
   @override
   Widget build(BuildContext context) {
+    /**
+     * REORDER ELEMENTS
+     *  when order change the widget will not rebuild. Only change what widget refers to which element for stateless widget
+     */
     return Column(
       children: [
         Align(
